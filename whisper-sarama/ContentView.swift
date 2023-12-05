@@ -1,24 +1,43 @@
-//
-//  ContentView.swift
-//  whisper-sarama
-//
-//  Created by Parav Nagarsheth on 12/6/23.
-//
-
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
+    @StateObject var whisperState = WhisperState()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                HStack {
+                    Button("Transcribe", action: {
+                        Task {
+                            await whisperState.transcribeSample()
+                        }
+                    })
+                    .buttonStyle(.bordered)
+                    .disabled(!whisperState.canTranscribe)
+                    
+                    Button(whisperState.isRecording ? "Stop recording" : "Start recording", action: {
+                        Task {
+                            await whisperState.toggleRecord()
+                        }
+                    })
+                    .buttonStyle(.bordered)
+                    .disabled(!whisperState.canTranscribe)
+                }
+                
+                ScrollView {
+                    Text(verbatim: whisperState.messageLog)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+            }
+            .navigationTitle("Whisper SwiftUI Demo")
+            .padding()
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

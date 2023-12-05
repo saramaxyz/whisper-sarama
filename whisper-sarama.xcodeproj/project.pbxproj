@@ -3,22 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E8389972B1FB2F3000EB181 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = 7E8389962B1FB2F3000EB181 /* whisper */; };
+		7E8389992B1FBBDE000EB181 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8389982B1FBBDE000EB181 /* LibWhisper.swift */; };
+		7E83899B2B1FBC36000EB181 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83899A2B1FBC36000EB181 /* WhisperState.swift */; };
+		7E83899D2B1FBC47000EB181 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83899C2B1FBC47000EB181 /* Recorder.swift */; };
+		7E83899F2B1FBC53000EB181 /* RiffWaveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E83899E2B1FBC53000EB181 /* RiffWaveUtils.swift */; };
+		7E8389AB2B1FBD9E000EB181 /* ggml-base.en.bin in Resources */ = {isa = PBXBuildFile; fileRef = 7E8389A42B1FBD9E000EB181 /* ggml-base.en.bin */; };
+		7E8389AC2B1FBD9E000EB181 /* ggml-base.en-encoder.mlmodelc in Resources */ = {isa = PBXBuildFile; fileRef = 7E8389A52B1FBD9E000EB181 /* ggml-base.en-encoder.mlmodelc */; };
+		7E8389AD2B1FBD9E000EB181 /* coreml-encoder-base.en.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7E8389A62B1FBD9E000EB181 /* coreml-encoder-base.en.mlpackage */; };
+		7E8389AF2B1FBD9E000EB181 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7E8389A92B1FBD9E000EB181 /* .gitignore */; };
+		7E8389B02B1FBD9E000EB181 /* jfk.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7E8389AA2B1FBD9E000EB181 /* jfk.wav */; };
 		7ED61FE82B1FA9B6005ABEDC /* whisper_saramaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED61FE72B1FA9B6005ABEDC /* whisper_saramaApp.swift */; };
 		7ED61FEA2B1FA9B6005ABEDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED61FE92B1FA9B6005ABEDC /* ContentView.swift */; };
 		7ED61FEC2B1FA9B8005ABEDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED61FEB2B1FA9B8005ABEDC /* Assets.xcassets */; };
 		7ED61FEF2B1FA9B8005ABEDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED61FEE2B1FA9B8005ABEDC /* Preview Assets.xcassets */; };
+		7ED61FF92B1FADF1005ABEDC /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = 7ED61FF82B1FADF1005ABEDC /* whisper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E8389982B1FBBDE000EB181 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
+		7E83899A2B1FBC36000EB181 /* WhisperState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperState.swift; sourceTree = "<group>"; };
+		7E83899C2B1FBC47000EB181 /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		7E83899E2B1FBC53000EB181 /* RiffWaveUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiffWaveUtils.swift; sourceTree = "<group>"; };
+		7E8389A42B1FBD9E000EB181 /* ggml-base.en.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-base.en.bin"; sourceTree = "<group>"; };
+		7E8389A52B1FBD9E000EB181 /* ggml-base.en-encoder.mlmodelc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "ggml-base.en-encoder.mlmodelc"; sourceTree = "<group>"; };
+		7E8389A62B1FBD9E000EB181 /* coreml-encoder-base.en.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "coreml-encoder-base.en.mlpackage"; sourceTree = "<group>"; };
+		7E8389A92B1FBD9E000EB181 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7E8389AA2B1FBD9E000EB181 /* jfk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jfk.wav; sourceTree = "<group>"; };
 		7ED61FE42B1FA9B6005ABEDC /* whisper-sarama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whisper-sarama.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED61FE72B1FA9B6005ABEDC /* whisper_saramaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whisper_saramaApp.swift; sourceTree = "<group>"; };
 		7ED61FE92B1FA9B6005ABEDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7ED61FEB2B1FA9B8005ABEDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED61FEE2B1FA9B8005ABEDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7ED61FFA2B1FB12F005ABEDC /* whisper */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = whisper; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,15 +47,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED61FF92B1FADF1005ABEDC /* whisper in Frameworks */,
+				7E8389972B1FB2F3000EB181 /* whisper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E8389A22B1FBD9E000EB181 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E8389A32B1FBD9E000EB181 /* models */,
+				7E8389A82B1FBD9E000EB181 /* samples */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E8389A32B1FBD9E000EB181 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7E8389A42B1FBD9E000EB181 /* ggml-base.en.bin */,
+				7E8389A52B1FBD9E000EB181 /* ggml-base.en-encoder.mlmodelc */,
+				7E8389A62B1FBD9E000EB181 /* coreml-encoder-base.en.mlpackage */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		7E8389A82B1FBD9E000EB181 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				7E8389A92B1FBD9E000EB181 /* .gitignore */,
+				7E8389AA2B1FBD9E000EB181 /* jfk.wav */,
+			);
+			path = samples;
+			sourceTree = "<group>";
+		};
 		7ED61FDB2B1FA9B6005ABEDC = {
 			isa = PBXGroup;
 			children = (
+				7ED61FFA2B1FB12F005ABEDC /* whisper */,
 				7ED61FE62B1FA9B6005ABEDC /* whisper-sarama */,
 				7ED61FE52B1FA9B6005ABEDC /* Products */,
 			);
@@ -53,8 +105,13 @@
 			children = (
 				7ED61FE72B1FA9B6005ABEDC /* whisper_saramaApp.swift */,
 				7ED61FE92B1FA9B6005ABEDC /* ContentView.swift */,
+				7E83899A2B1FBC36000EB181 /* WhisperState.swift */,
+				7E83899C2B1FBC47000EB181 /* Recorder.swift */,
+				7E83899E2B1FBC53000EB181 /* RiffWaveUtils.swift */,
+				7E8389A22B1FBD9E000EB181 /* Resources */,
 				7ED61FEB2B1FA9B8005ABEDC /* Assets.xcassets */,
 				7ED61FED2B1FA9B8005ABEDC /* Preview Content */,
+				7E8389982B1FBBDE000EB181 /* LibWhisper.swift */,
 			);
 			path = "whisper-sarama";
 			sourceTree = "<group>";
@@ -83,6 +140,10 @@
 			dependencies = (
 			);
 			name = "whisper-sarama";
+			packageProductDependencies = (
+				7ED61FF82B1FADF1005ABEDC /* whisper */,
+				7E8389962B1FB2F3000EB181 /* whisper */,
+			);
 			productName = "whisper-sarama";
 			productReference = 7ED61FE42B1FA9B6005ABEDC /* whisper-sarama.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 7ED61FDB2B1FA9B6005ABEDC;
+			packageReferences = (
+				7E8389952B1FB2F3000EB181 /* XCLocalSwiftPackageReference "whisper" */,
+			);
 			productRefGroup = 7ED61FE52B1FA9B6005ABEDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +189,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8389B02B1FBD9E000EB181 /* jfk.wav in Resources */,
 				7ED61FEF2B1FA9B8005ABEDC /* Preview Assets.xcassets in Resources */,
+				7E8389AC2B1FBD9E000EB181 /* ggml-base.en-encoder.mlmodelc in Resources */,
 				7ED61FEC2B1FA9B8005ABEDC /* Assets.xcassets in Resources */,
+				7E8389AF2B1FBD9E000EB181 /* .gitignore in Resources */,
+				7E8389AB2B1FBD9E000EB181 /* ggml-base.en.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8389AD2B1FBD9E000EB181 /* coreml-encoder-base.en.mlpackage in Sources */,
+				7E83899D2B1FBC47000EB181 /* Recorder.swift in Sources */,
+				7E83899B2B1FBC36000EB181 /* WhisperState.swift in Sources */,
 				7ED61FEA2B1FA9B6005ABEDC /* ContentView.swift in Sources */,
+				7E8389992B1FBBDE000EB181 /* LibWhisper.swift in Sources */,
 				7ED61FE82B1FA9B6005ABEDC /* whisper_saramaApp.swift in Sources */,
+				7E83899F2B1FBC53000EB181 /* RiffWaveUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +353,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +378,13 @@
 				DEVELOPMENT_TEAM = 62F2ZV8GBX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone usage to allow the app to record your voice";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +420,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		7E8389952B1FB2F3000EB181 /* XCLocalSwiftPackageReference "whisper" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = whisper;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E8389962B1FB2F3000EB181 /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = whisper;
+		};
+		7ED61FF82B1FADF1005ABEDC /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = whisper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7ED61FDC2B1FA9B6005ABEDC /* Project object */;
 }
