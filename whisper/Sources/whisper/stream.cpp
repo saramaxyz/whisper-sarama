@@ -89,9 +89,6 @@ const char * stream_get_text(struct whisper_context * whisper_ctx,
     fprintf(stderr, "%s: failed to process audio\n", argv[0]);
     return 6;
   }
-  WHISPER_LOG_INFO("%s: \33[2K\r", __func__);
-  
-  WHISPER_LOG_INFO("%s: \33[2K\r", __func__);
   
   // Update transcript
   std::string transcript;
