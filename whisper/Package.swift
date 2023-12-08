@@ -38,7 +38,8 @@ let package = Package(
                 "ggml-alloc.c",
                 "ggml-backend.c",
                 "ggml-quants.c",
-                "ggml-metal.m"
+                "ggml-metal.m",
+                "stream.cpp"
             ],
             publicHeadersPath: "spm-headers",
             cSettings: [

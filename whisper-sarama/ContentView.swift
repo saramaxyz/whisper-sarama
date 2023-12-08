@@ -21,6 +21,11 @@ struct ContentView: View {
                             await whisperState.toggleRecord()
                         }
                     })
+                    Button(whisperState.isStreaming ? "Stop streaming" : "Start streaming", action: {
+                        Task {
+                            await whisperState.toggleStream()
+                        }
+                    })
                     .buttonStyle(.bordered)
                     .disabled(!whisperState.canTranscribe)
                 }
