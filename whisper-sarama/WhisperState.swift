@@ -8,12 +8,14 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     @Published var messageLog = ""
     @Published var canTranscribe = false
     @Published var isRecording = false
+    @Published var isStreaming = false
     
     private var whisperContext: WhisperContext?
     private let recorder = Recorder()
     private var recordedFile: URL? = nil
     private var audioPlayer: AVAudioPlayer?
-    
+    private var audioEngine = AVAudioEngine()
+  
     private var modelUrl: URL? {
         Bundle.main.url(forResource: "ggml-base.en", withExtension: "bin")
     }
@@ -84,7 +86,32 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
         try startPlayback(url)
         return try decodeWaveFile(url)
     }
-    
+  
+    func toggleStream() async {
+        if isStreaming {
+            await recorder.stopStreaming()
+            isStreaming = false
+        } else {
+//            requestRecordPermission { granted in
+//                if granted {
+                    Task {
+                        do {
+                            try await self.recorder.startStreaming(whisperContext: self.whisperContext!, delegate: self)
+                            self.isStreaming = true
+                        } catch {
+                            print(error.localizedDescription)
+                            self.messageLog += "\(error.localizedDescription)\n"
+                            self.isStreaming = false
+                        }
+                    }
+//                }
+//                else {
+//                    self.isStreaming = false
+//                }
+//            }
+        }
+    }
+  
     func toggleRecord() async {
         if isRecording {
             await recorder.stopRecording()

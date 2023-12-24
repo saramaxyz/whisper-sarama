@@ -142,6 +142,41 @@ extern "C" {
         uint32_t             value; // Unicode code point or rule ID
     } whisper_grammar_element;
 
+    WHISPER_API struct stream_full_params {
+        int32_t n_threads;
+        int32_t step_ms;
+        int32_t length_ms;
+        int32_t keep_ms;
+        int32_t capture_id;
+        int32_t max_tokens;
+        int32_t audio_ctx;
+
+        float vad_thold;
+        float freq_thold;
+
+        bool speed_up;
+        bool translate;
+        bool no_fallback;
+        bool print_special;
+        bool no_context;
+        bool no_timestamps;
+        bool tinydiarize;
+        bool save_audio; // save audio to wav file
+        bool use_gpu;
+    };
+
+    WHISPER_API const char * stream_get_text(struct whisper_context * whisper_ctx,
+                                             struct stream_context * stream_ctx,
+                                             struct stream_full_params stream_params,
+                                             struct whisper_full_params whisper_params,
+                                             const float * samples,
+                                             int n_samples);
+
+    WHISPER_API struct stream_full_params stream_full_default_params();
+
+    WHISPER_API struct stream_context * whisper_init_stream();
+
+
     // Various functions for loading a ggml whisper model.
     // Allocate (almost) all memory needed for the model.
     // Return NULL on failure
